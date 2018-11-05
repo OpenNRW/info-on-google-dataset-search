@@ -1,4 +1,3 @@
-<script type="application/ld+json">
 {
   "@context":{
     "@vocab":"https://schema.org/",
@@ -162,4 +161,3 @@
      }
   }
 }
-</script>
