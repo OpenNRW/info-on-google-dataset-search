@@ -88,12 +88,12 @@ script element with a type of "application/ld+json":
 Dataset search will find such tags that are embedded in the HTML page
 and index the schema.org metadata contained within. This approach is
 demonstrated in the sample HTML page
-[dataset.embedded.html](https://OpenNRW.github.io/info-on-google-dataset-search/docs/dataset.embedded.html).
+[dataset.embedded.html](https://OpenNRW.github.io/info-on-google-dataset-search/dataset.embedded.html).
 
 If directly embedding the schema.org metadata is difficult, it is also
 possible to load it dynamically and inject it in the page, e.g. from
 some REST endpoint. This approach is demonstrated in the sample HTML
-page [dataset.dynamic.html](https://OpenNRW.github.io/info-on-google-dataset-search/docs/dataset.dynamic.html).
+page [dataset.dynamic.html](https://OpenNRW.github.io/info-on-google-dataset-search/dataset.dynamic.html).
 Note that this sample only works if loaded from a web server, and not
 from the local file system, because of security restrictions in the
 browser.
