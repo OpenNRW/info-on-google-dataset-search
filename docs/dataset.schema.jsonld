@@ -1,0 +1,165 @@
+<script type="application/ld+json">
+{
+  "@context":{
+    "@vocab":"https://schema.org/",
+    "@language":"de"
+  },
+  "@type":"Dataset",
+  "name":"VGR der Länder: Arbeitnehmerentgelte nach Wirtschaftsbereichen (7) der WZ 2008 und je Arbeitnehmer - kreisfrei Städte und Kreise - Jahr",
+  "description":"Die VGR bietet Kennzahlen zur Wirtschaftsleistung. Es werden jährlich Kennzahlen, wie die Bruttowertschöpfung oder das Arbeitnehmerentgelt, gegliedert nach Wirtschaftszweigen, veröffentlicht. Es handelt sich um ein Gesamtrechnungssystem, d. h. Ergebnisse aus unterschiedlichen Statistiken werden herangezogen und fließen in die weiteren Berechnungen ein. Regional differenziert sind die Daten bis auf die Ebene der kreisfreien Städte und Kreise.  Hier finden Sie weiterführende Informationen zu der Statistik der VGR der Länder - Kreisberechnungen.   Hier finden Sie die statistischen Fachpublikationen (i.d.R. im PDF-Format) für Nordrhein-Westfalen:   [Link auf Webshop von IT.NRW, Geschäftsbereich Statistik]",
+  "url":"https://www.landesdatenbank.nrw.de/link/tabelleAufbau/82711-06iz",
+  "identifier":[
+  	"https://www.landesdatenbank.nrw.de/ldbnrw/online?sequenz=tabelleErgebnis&selectionname=82711-06iz&regionalschluessel=00",
+    "a642d7e5-bf1c-57f9-89df-cdad67c7c0fc"
+  ],
+  "keywords":[
+     "Produzierendes Gewerbe ohne Baugewerbe",
+     "Verarbeitendes Gewerbe",
+     "Baugewerbe"
+  ],
+  "about": [
+  	{
+      "@id":"http://publications.europa.eu/resource/authority/data-theme/ECON",
+      "@type":"Class"
+    }
+  ],
+  "contributor":{
+     "@type":"Organization",
+     "url": "https://www.landesdatenbank.nrw.de/"
+  },
+  "datePublished":"2018-06-27",
+  "dateModified":"2018-10-01T08:37:40.977961",
+  "creator":{
+     "@type":"Organization",
+     "name":"Information und Technik Nordrhein-Westfalen",
+     "contactPoint":{
+        "@type":"ContactPoint",
+        "contactType": "technical support",
+        "email":"ldb-redaktion@it.nrw.de",
+        "url":"https://www.it.nrw/"
+     }
+  },
+  "publisher":{
+     "@type":"Organization",
+     "name":"Landesdatenbank NRW"
+  },
+  "includedInDataCatalog":{
+     "@type":"DataCatalog",
+     "name":"Open.NRW"
+  },
+  "distribution":[
+     {
+        "@type":"DataDownload",
+        "description":"Aktuelle Daten als CSV-Datei",
+        "encodingFormat":"CSV",
+        "contentUrl":"https://www.landesdatenbank.nrw.de/link/tabelleDownload/82711-06iz.csv",
+        "license":"http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+        "inLanguage":"de"
+     },
+     {
+        "@type":"DataDownload",
+        "description":"Daten vor einem Jahr als CSV-Datei",
+        "encodingFormat":"CSV",
+        "contentUrl":"https://www.landesdatenbank.nrw.de/link/tabelleDownload/82711-06iz.csv/-1",
+        "license":"http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+        "inLanguage":"de"
+     },
+     {
+        "@type":"DataDownload",
+        "description":"Daten vor 2 Jahren als CSV-Datei",
+        "encodingFormat":"CSV",
+        "contentUrl":"https://www.landesdatenbank.nrw.de/link/tabelleDownload/82711-06iz.csv/-2",
+        "license":"http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+        "inLanguage":"de"
+     },
+     {
+        "@type":"DataDownload",
+        "description":"Daten vor 3 Jahren als CSV-Datei",
+        "encodingFormat":"CSV",
+        "contentUrl":"https://www.landesdatenbank.nrw.de/link/tabelleDownload/82711-06iz.csv/-3",
+        "license":"http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+        "inLanguage":"de"
+     },
+     {
+        "@type":"DataDownload",
+        "description":"Daten vor 4 Jahren als CSV-Datei",
+        "encodingFormat":"CSV",
+        "contentUrl":"https://www.landesdatenbank.nrw.de/link/tabelleDownload/82711-06iz.csv/-4",
+        "license":"http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+        "inLanguage":"de"
+     },
+     {
+        "@type":"DataDownload",
+        "description":"Daten vor 9 Jahren als CSV-Datei",
+        "encodingFormat":"CSW",
+        "contentUrl":"https://www.landesdatenbank.nrw.de/link/tabelleDownload/82711-06iz.csv/-9",
+        "license":"http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+        "inLanguage":"de"
+     },
+     {
+        "@type":"DataDownload",
+        "description":"Aktuelle Daten als XML-Datei",
+        "encodingFormat":"XML",
+        "contentUrl":"https://www.landesdatenbank.nrw.de/link/tabelleDownload/82711-06iz.xml",
+        "license":"http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+        "inLanguage":"de"
+     },
+     {
+        "@type":"DataDownload",
+        "description":"Daten vor einem Jahr als XML-Datei",
+        "encodingFormat":"XML",
+        "contentUrl":"https://www.landesdatenbank.nrw.de/link/tabelleDownload/82711-06iz.xml",
+        "license":"http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+        "inLanguage":"de"
+     },
+     {
+        "@type":"DataDownload",
+        "description":"Daten vor 2 Jahren als XML-Datei",
+        "encodingFormat":"XML",
+        "contentUrl":"https://www.landesdatenbank.nrw.de/link/tabelleDownload/82711-06iz.xml/-2",
+        "license":"http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+        "inLanguage":"de"
+     },
+     {
+        "@type":"DataDownload",
+        "description":"Daten vor 3 Jahren als XML-Datei",
+        "encodingFormat":"XML",
+        "contentUrl":"https://www.landesdatenbank.nrw.de/link/tabelleDownload/82711-06iz.xml/-3",
+        "license":"http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+        "inLanguage":"de"
+     },
+     {
+        "@type":"DataDownload",
+        "description":"Daten vor 4 Jahren als XML-Datei",
+        "encodingFormat":"XML",
+        "contentUrl":"https://www.landesdatenbank.nrw.de/link/tabelleDownload/82711-06iz.xml/-4",
+        "license":"http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+        "inLanguage":"de"
+     },
+     {
+        "@type":"DataDownload",
+        "description":"Daten vor 9 Jahren als XML-Datei",
+        "encodingFormat":"XML",
+        "contentUrl":"https://www.landesdatenbank.nrw.de/link/tabelleDownload/82711-06iz.xml/-9",
+        "license":"http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+        "inLanguage":"de"
+     },
+     {
+        "@type":"DataDownload",
+        "description":"Weitere Auswahlmöglichkeiten",
+        "encodingFormat":"HTML",
+        "contentUrl":"https://www.landesdatenbank.nrw.de/link/tabelleAufbau/82711-06iz",
+        "license":"http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+        "inLanguage":"de"
+     }
+  ],
+  "temporalCoverage":"2000-01-01T00:00:00/2016-01-01T00:00:00",
+  "spatialCoverage":{
+     "@type":"Place",
+     "geo":{
+        "@type":"GeoShape",
+        "polygon":"52.6000 5.9000 52.6000 9.5000 50.2000 9.5000 50.2000 5.9000 52.6000 5.9000"
+     }
+  }
+}
+</script>

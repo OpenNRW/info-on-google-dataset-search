@@ -1,0 +1,120 @@
+/* Set global namespace = NRWgov */
+var NRWgov = window.NRWgov || {};
+
+/* Set text-overflow to ellipsis for all fields used in views wrappen in views-field-data */
+NRWgov.addEllipsis = function() {
+  jQuery(".view .views-field-data > div").ellipsis();
+  jQuery(".view .group-atom-wrapper > div").ellipsis();
+};
+
+
+NRWgov.replacePaginationLinks = function() {
+  var $active_links = jQuery(".pagination-scroll ul.alpha-pagination-list > li:not(.inactive) > a");
+
+  if ($active_links.length) {
+    $active_links.each(function () {
+      jQuery(this).attr('href', 'javascript:void(0)');
+    });
+  }
+}
+
+NRWgov.prepareVideoSubtitles = function() {
+	var subtitlePathLists = jQuery('div.field-name-field-subtitle-file');
+      subtitlePathLists.each(function() {
+        var pathList = jQuery(this).text();
+        var pathArray = pathList.split(".vtt");
+		var pathTracksArray = new Array;
+		
+        /* Remove empty elements from array caused by split method */
+        pathArray = pathArray.filter(function(e){return e});
+
+        var pathTracks = "";
+        pathArray.forEach(function (element) {
+          /* Match language and dont forget to add the extension lost on split */		  
+		  if (element.match(/.*-de(_[0-9]*)?$/)) {
+            pathTracks = document.createElement("track");
+            pathTracks.setAttribute('src', element + '.vtt');
+			pathTracks.setAttribute('label', 'Deutsch');
+            pathTracks.setAttribute('kind', 'subtitles');
+            pathTracks.setAttribute('srclang', 'de');
+		  } else if (element.match(/.*-en(_[0-9]*)?$/)) {
+            pathTracks = document.createElement("track");
+            pathTracks.setAttribute('label', 'Englisch');
+            pathTracks.setAttribute('kind', 'subtitles');
+            pathTracks.setAttribute('srclang', 'en');
+            pathTracks.setAttribute('src', element + '.vtt');
+          } else if (element.match(/.*-fr(_[0-9]*)?$/)) {
+            pathTracks = document.createElement("track");
+            pathTracks.setAttribute('label', 'Français');
+            pathTracks.setAttribute('kind', 'subtitles');
+            pathTracks.setAttribute('srclang', 'fr');
+            pathTracks.setAttribute('src', element + '.vtt');
+          };
+		  pathTracksArray.push(pathTracks);
+        })
+
+		for (counter = 0; counter < pathTracksArray.length; counter++)  {
+			var video = jQuery(this).prevUntil();
+			video.append(pathTracksArray[counter]);
+		}
+		
+		jQuery(this).remove();
+    })
+	
+  }
+
+NRWgov.prepareVideoMobileVersion = function() {
+  if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/iPhone|iPod|iPad/i) || navigator.userAgent.match(/Opera Mini/i) || navigator.userAgent.match(/IEMobile/i)){
+    jQuery('video.scald_video').each(function() {
+      var sources = jQuery(this).children('source');
+      var sourcesNeu = [];
+      var check = false;
+
+      for (var counter = 0; counter < sources.length; counter ++){
+        var source = sources[counter]['src'].substring(0, sources[counter]['src'].lastIndexOf('.'));
+        if (source.match(/.*_mobile(_[0-9]*)?$/) ){
+          sourcesNeu.unshift(sources[counter]);
+          check = true;
+        } else {
+          sourcesNeu.push(sources[counter]);
+        }
+      }
+
+      if (check){
+        jQuery(this).children('source').remove();
+        for (var counter = 0; counter < sourcesNeu.length; counter ++){
+          jQuery(this).append(sourcesNeu[counter]);
+        }
+		jQuery(this).load();
+      }
+    });
+  }
+}
+  
+Drupal.behaviors.alphaPagination = {
+  attach: function (context, settings) {
+    jQuery(".pagination-scroll ul.alpha-pagination-list > li:not(.inactive) > a").click(function () {
+      var $letter = jQuery(this).text();
+      var $toplevel_entries = jQuery(".pagination-scroll > .view-content > .item-list > ul > li");
+      if ($toplevel_entries.length) {
+        $toplevel_entries.each(function () {
+          if ($letter == this.innerText[0]) {
+            $target = jQuery(this);
+            $scroll_target = $target.parent().scrollTop() +  $target.offset().top - $target.parent().offset().top;
+            jQuery(".pagination-scroll > .view-content").animate({scrollTop: $scroll_target});
+            return true;
+          }
+        })
+      }
+    });
+  }
+}
+
+
+/* Document ready */
+jQuery(document).ready(function() {
+  NRWgov.addEllipsis();
+  NRWgov.replacePaginationLinks();
+  NRWgov.prepareVideoSubtitles();
+  NRWgov.prepareVideoMobileVersion();
+});

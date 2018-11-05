@@ -1,0 +1,17 @@
+/* Set global namespace = NRWgov */
+var opennrw_base_theme = window.opennrw_base_theme || {};
+
+/* Document ready */
+jQuery(document).ready(function() {
+	var links = jQuery('a.views-link-container');
+    for (i = 0; i < links.length; i++){
+        if (links[i].host != window.location.host){
+            links[i].target = "_blank";
+        }
+    }
+	
+	/* Startseite Link zu allen Terminen*/
+	if (jQuery(".pane-opennrw .region-two-50-first .view-common-content-displays-event-list .view-content > div").length < 4) {
+		jQuery(".pane-opennrw .region-two-50-first .pane-custom").addClass('hidden');
+	}
+});
